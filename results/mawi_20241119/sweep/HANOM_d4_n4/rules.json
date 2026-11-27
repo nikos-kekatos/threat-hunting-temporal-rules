@@ -1,0 +1,110 @@
+{
+ "params": {
+  "extract_dir": "./code/../results/extract",
+  "outdir": "./code/../results/sweep/HANOM_d4_n4",
+  "psiminer": "../PSIMiner/build/psiMiner",
+  "max_train_per_class": 150,
+  "seq_length": 4,
+  "delay_res": "1",
+  "depth": 4,
+  "seed": 1,
+  "target": "HANOM",
+  "split_salt": "s0"
+ },
+ "train_counts": {
+  "anomalous": 150,
+  "benign": 150
+ },
+ "predicates": [
+  [
+   "ACTIVE",
+   "pkts>=1"
+  ],
+  [
+   "PKTS_HI",
+   "pkts>=20"
+  ],
+  [
+   "DST_MANY",
+   "ndst>=10"
+  ],
+  [
+   "DST_VMANY",
+   "ndst>=100"
+  ],
+  [
+   "DPORT_MANY",
+   "ndport>=10"
+  ],
+  [
+   "DPORT_VMANY",
+   "ndport>=100"
+  ],
+  [
+   "SYN_DOM",
+   "syn_pct>=50"
+  ],
+  [
+   "SYNACK",
+   "synack>=1"
+  ],
+  [
+   "RST",
+   "rst>=1"
+  ],
+  [
+   "UDP_DOM",
+   "udp_pct>=50"
+  ],
+  [
+   "ICMP",
+   "icmp>=1"
+  ],
+  [
+   "SMALL_DOM",
+   "small_pct>=80"
+  ],
+  [
+   "BPP_LARGE",
+   "bpp>=1000"
+  ],
+  [
+   "ANOM",
+   "anom>=1"
+  ],
+  [
+   "HANOM",
+   "hanom>=1"
+  ]
+ ],
+ "rules": {
+  "ordered": [
+   {
+    "antecedent": "!ANOM && !ACTIVE",
+    "lo": 0.0,
+    "hi": 4.0,
+    "consequent": "!HANOM",
+    "support": 88.052508,
+    "correlation": 93.896036
+   }
+  ],
+  "permuted": [
+   {
+    "antecedent": "!ANOM && !SYN_DOM && !ACTIVE",
+    "lo": 0.0,
+    "hi": 4.0,
+    "consequent": "!HANOM",
+    "support": 88.719023,
+    "correlation": 94.701674
+   },
+   {
+    "antecedent": "!ANOM && SYN_DOM",
+    "lo": 0.0,
+    "hi": 4.0,
+    "consequent": "!HANOM",
+    "support": 5.364349,
+    "correlation": 84.914328
+   }
+  ]
+ }
+}

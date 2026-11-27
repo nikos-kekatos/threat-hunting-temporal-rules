@@ -1,0 +1,93 @@
+{
+ "params": {
+  "extract_dir": "./code/../results/extract",
+  "outdir": "./code/../results/sweep/ANOM_d6_n4",
+  "psiminer": "../PSIMiner/build/psiMiner",
+  "max_train_per_class": 150,
+  "seq_length": 4,
+  "delay_res": "1",
+  "depth": 6,
+  "seed": 1,
+  "target": "ANOM",
+  "split_salt": "s0"
+ },
+ "train_counts": {
+  "anomalous": 150,
+  "benign": 150
+ },
+ "predicates": [
+  [
+   "ACTIVE",
+   "pkts>=1"
+  ],
+  [
+   "PKTS_HI",
+   "pkts>=20"
+  ],
+  [
+   "DST_MANY",
+   "ndst>=10"
+  ],
+  [
+   "DST_VMANY",
+   "ndst>=100"
+  ],
+  [
+   "DPORT_MANY",
+   "ndport>=10"
+  ],
+  [
+   "DPORT_VMANY",
+   "ndport>=100"
+  ],
+  [
+   "SYN_DOM",
+   "syn_pct>=50"
+  ],
+  [
+   "SYNACK",
+   "synack>=1"
+  ],
+  [
+   "RST",
+   "rst>=1"
+  ],
+  [
+   "UDP_DOM",
+   "udp_pct>=50"
+  ],
+  [
+   "ICMP",
+   "icmp>=1"
+  ],
+  [
+   "SMALL_DOM",
+   "small_pct>=80"
+  ],
+  [
+   "BPP_LARGE",
+   "bpp>=1000"
+  ],
+  [
+   "ANOM",
+   "anom>=1"
+  ],
+  [
+   "HANOM",
+   "hanom>=1"
+  ]
+ ],
+ "rules": {
+  "ordered": [],
+  "permuted": [
+   {
+    "antecedent": "!UDP_DOM && ACTIVE && !SYN_DOM ##[ 0.000000 : 1.000000 ] !ACTIVE",
+    "lo": 0.0,
+    "hi": 3.0,
+    "consequent": "!ANOM",
+    "support": 10.166744,
+    "correlation": 10.67709
+   }
+  ]
+ }
+}

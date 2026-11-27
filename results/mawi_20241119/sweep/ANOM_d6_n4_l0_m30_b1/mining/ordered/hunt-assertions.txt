@@ -1,0 +1,7 @@
+ASSERTION LIST: 
+
+
+****************** TARGET [ANOM] ********************
+!UDP_DOM && ACTIVE && !BPP_LARGE ##[ 0.000000 : 2.000000 ] !PKTS_HI ##[ 0.000000 : 1.000000 ] !ACTIVE && !PKTS_HI|=> ##[ 0.000000 : 2.000000 ] ANOM
+SUPPORT		= [0.027471]
+CORRELATION	= [0.581691]

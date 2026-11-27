@@ -1,0 +1,502 @@
+{
+ "n_test": 13918,
+ "n_test_anomalous": 3483,
+ "n_train": 300,
+ "rules": {
+  "ordered": [
+   {
+    "antecedent": "ACTIVE ##[ 0.000000 : 2.000000 ] UDP_DOM && DPORT_VMANY",
+    "lo": 0.0,
+    "hi": 2.0,
+    "consequent": "ANOM",
+    "support": 0.379316,
+    "correlation": 7.750658,
+    "length": 3,
+    "steps": 2,
+    "host": {
+     "tp": 0,
+     "fp": 5,
+     "fn": 3483,
+     "tn": 10430,
+     "precision": 0.0,
+     "precision_ci": [
+      0.0,
+      0.4345
+     ],
+     "recall": 0.0,
+     "recall_ci": [
+      0.0,
+      0.0011
+     ],
+     "f1": 0.0
+    },
+    "host_permuted": {
+     "tp": 0,
+     "fp": 5,
+     "fn": 3483,
+     "tn": 10430,
+     "precision": 0.0,
+     "precision_ci": [
+      0.0,
+      0.4345
+     ],
+     "recall": 0.0,
+     "recall_ci": [
+      0.0,
+      0.0011
+     ],
+     "f1": 0.0
+    },
+    "bin_confidence": 0.0,
+    "bin_completions": 37,
+    "bin_confidence_permuted": 0.0,
+    "bin_confidence_collapsed": 0.0,
+    "window_gain": 0.0,
+    "recall_by_taxonomy": {
+     "alphfl": [
+      0,
+      2
+     ],
+     "alphflHTTP": [
+      0,
+      1
+     ],
+     "mptmp": [
+      0,
+      701
+     ],
+     "mptp": [
+      0,
+      2746
+     ],
+     "ntscICecrqICecrprp": [
+      0,
+      1
+     ],
+     "ntscSYN": [
+      0,
+      5
+     ],
+     "ntscSYN139445": [
+      0,
+      1
+     ],
+     "ntscUDPOther": [
+      0,
+      1
+     ],
+     "ntscUDPUDPrp": [
+      0,
+      20
+     ],
+     "ptmp": [
+      0,
+      2
+     ],
+     "ptmplaHTTP": [
+      0,
+      1
+     ],
+     "salphfl": [
+      0,
+      1
+     ],
+     "sntscSYN": [
+      0,
+      1
+     ]
+    }
+   }
+  ],
+  "permuted": []
+ },
+ "playbook_ordered": {
+  "tp": 0,
+  "fp": 5,
+  "fn": 3483,
+  "tn": 10430,
+  "precision": 0.0,
+  "precision_ci": [
+   0.0,
+   0.4345
+  ],
+  "recall": 0.0,
+  "recall_ci": [
+   0.0,
+   0.0011
+  ],
+  "f1": 0.0
+ },
+ "playbook_recall_by_taxonomy": {
+  "alphfl": [
+   0,
+   2
+  ],
+  "alphflHTTP": [
+   0,
+   1
+  ],
+  "mptmp": [
+   0,
+   701
+  ],
+  "mptp": [
+   0,
+   2746
+  ],
+  "ntscICecrqICecrprp": [
+   0,
+   1
+  ],
+  "ntscSYN": [
+   0,
+   5
+  ],
+  "ntscSYN139445": [
+   0,
+   1
+  ],
+  "ntscUDPOther": [
+   0,
+   1
+  ],
+  "ntscUDPUDPrp": [
+   0,
+   20
+  ],
+  "ptmp": [
+   0,
+   2
+  ],
+  "ptmplaHTTP": [
+   0,
+   1
+  ],
+  "salphfl": [
+   0,
+   1
+  ],
+  "sntscSYN": [
+   0,
+   1
+  ]
+ },
+ "playbook_permuted": {
+  "tp": 0,
+  "fp": 0,
+  "fn": 3483,
+  "tn": 10435,
+  "precision": 0.0,
+  "precision_ci": [
+   0.0,
+   0.0
+  ],
+  "recall": 0.0,
+  "recall_ci": [
+   0.0,
+   0.0011
+  ],
+  "f1": 0.0
+ },
+ "expert": [
+  {
+   "name": "H1 network scan",
+   "antecedent": "DST_MANY && SYN_DOM",
+   "host": {
+    "tp": 8,
+    "fp": 359,
+    "fn": 3475,
+    "tn": 10076,
+    "precision": 0.0218,
+    "precision_ci": [
+     0.0111,
+     0.0424
+    ],
+    "recall": 0.0023,
+    "recall_ci": [
+     0.0012,
+     0.0045
+    ],
+    "f1": 0.0042
+   },
+   "bin_confidence": 0.0027,
+   "bin_completions": 20492
+  },
+  {
+   "name": "H2 port scan",
+   "antecedent": "DPORT_MANY && SYN_DOM",
+   "host": {
+    "tp": 1,
+    "fp": 65,
+    "fn": 3482,
+    "tn": 10370,
+    "precision": 0.0152,
+    "precision_ci": [
+     0.0027,
+     0.081
+    ],
+    "recall": 0.0003,
+    "recall_ci": [
+     0.0001,
+     0.0016
+    ],
+    "f1": 0.0006
+   },
+   "bin_confidence": 0.0002,
+   "bin_completions": 4454
+  },
+  {
+   "name": "H3 SYN flood",
+   "antecedent": "PKTS_HI && SYN_DOM && SMALL_DOM",
+   "host": {
+    "tp": 8,
+    "fp": 189,
+    "fn": 3475,
+    "tn": 10246,
+    "precision": 0.0406,
+    "precision_ci": [
+     0.0207,
+     0.0781
+    ],
+    "recall": 0.0023,
+    "recall_ci": [
+     0.0012,
+     0.0045
+    ],
+    "f1": 0.0043
+   },
+   "bin_confidence": 0.008,
+   "bin_completions": 4255
+  },
+  {
+   "name": "H4 ICMP sweep",
+   "antecedent": "ICMP && DST_MANY",
+   "host": {
+    "tp": 5,
+    "fp": 210,
+    "fn": 3478,
+    "tn": 10225,
+    "precision": 0.0233,
+    "precision_ci": [
+     0.01,
+     0.0533
+    ],
+    "recall": 0.0014,
+    "recall_ci": [
+     0.0006,
+     0.0034
+    ],
+    "f1": 0.0027
+   },
+   "bin_confidence": 0.2385,
+   "bin_completions": 5702
+  },
+  {
+   "name": "H5 UDP scan",
+   "antecedent": "UDP_DOM && DPORT_MANY",
+   "host": {
+    "tp": 13,
+    "fp": 191,
+    "fn": 3470,
+    "tn": 10244,
+    "precision": 0.0637,
+    "precision_ci": [
+     0.0376,
+     0.106
+    ],
+    "recall": 0.0037,
+    "recall_ci": [
+     0.0022,
+     0.0064
+    ],
+    "f1": 0.0071
+   },
+   "bin_confidence": 0.0584,
+   "bin_completions": 13776
+  },
+  {
+   "name": "H6 rejected conn",
+   "antecedent": "RST && PKTS_HI",
+   "host": {
+    "tp": 400,
+    "fp": 791,
+    "fn": 3083,
+    "tn": 9644,
+    "precision": 0.3359,
+    "precision_ci": [
+     0.3096,
+     0.3632
+    ],
+    "recall": 0.1148,
+    "recall_ci": [
+     0.1047,
+     0.1259
+    ],
+    "f1": 0.1712
+   },
+   "bin_confidence": 0.3168,
+   "bin_completions": 10635
+  }
+ ],
+ "playbook_expert": {
+  "tp": 408,
+  "fp": 1414,
+  "fn": 3075,
+  "tn": 9021,
+  "precision": 0.2239,
+  "precision_ci": [
+   0.2054,
+   0.2436
+  ],
+  "recall": 0.1171,
+  "recall_ci": [
+   0.1069,
+   0.1282
+  ],
+  "f1": 0.1538
+ },
+ "playbook_expert_recall_by_taxonomy": {
+  "alphfl": [
+   1,
+   2
+  ],
+  "alphflHTTP": [
+   1,
+   1
+  ],
+  "mptmp": [
+   70,
+   701
+  ],
+  "mptp": [
+   327,
+   2746
+  ],
+  "ntscICecrqICecrprp": [
+   0,
+   1
+  ],
+  "ntscSYN": [
+   5,
+   5
+  ],
+  "ntscSYN139445": [
+   1,
+   1
+  ],
+  "ntscUDPOther": [
+   0,
+   1
+  ],
+  "ntscUDPUDPrp": [
+   0,
+   20
+  ],
+  "ptmp": [
+   2,
+   2
+  ],
+  "ptmplaHTTP": [
+   0,
+   1
+  ],
+  "salphfl": [
+   1,
+   1
+  ],
+  "sntscSYN": [
+   0,
+   1
+  ]
+ },
+ "test_by_taxonomy": {
+  "alphfl": 2,
+  "alphflHTTP": 1,
+  "benign": 10435,
+  "mptmp": 701,
+  "mptp": 2746,
+  "ntscICecrqICecrprp": 1,
+  "ntscSYN": 5,
+  "ntscSYN139445": 1,
+  "ntscUDPOther": 1,
+  "ntscUDPUDPrp": 20,
+  "ptmp": 2,
+  "ptmplaHTTP": 1,
+  "salphfl": 1,
+  "sntscSYN": 1
+ },
+ "tree_recall_by_taxonomy": {
+  "alphfl": [
+   1,
+   2
+  ],
+  "alphflHTTP": [
+   0,
+   1
+  ],
+  "mptmp": [
+   605,
+   701
+  ],
+  "mptp": [
+   2328,
+   2746
+  ],
+  "ntscICecrqICecrprp": [
+   0,
+   1
+  ],
+  "ntscSYN": [
+   0,
+   5
+  ],
+  "ntscSYN139445": [
+   0,
+   1
+  ],
+  "ntscUDPOther": [
+   0,
+   1
+  ],
+  "ntscUDPUDPrp": [
+   4,
+   20
+  ],
+  "ptmp": [
+   0,
+   2
+  ],
+  "ptmplaHTTP": [
+   1,
+   1
+  ],
+  "salphfl": [
+   0,
+   1
+  ],
+  "sntscSYN": [
+   0,
+   1
+  ]
+ },
+ "tree_baseline": {
+  "tp": 2939,
+  "fp": 2779,
+  "fn": 544,
+  "tn": 7656,
+  "precision": 0.514,
+  "precision_ci": [
+   0.501,
+   0.5269
+  ],
+  "recall": 0.8438,
+  "recall_ci": [
+   0.8314,
+   0.8555
+  ],
+  "f1": 0.6388,
+  "leaves": 8,
+  "tree": "|--- max_pkts <= 12.50\n|   |--- mean_udp_pct <= 94.82\n|   |   |--- max_bpp <= 1503.50\n|   |   |   |--- class: 0\n|   |   |--- max_bpp >  1503.50\n|   |   |   |--- class: 1\n|   |--- mean_udp_pct >  94.82\n|   |   |--- mean_bpp <= 80.59\n|   |   |   |--- class: 1\n|   |   |--- mean_bpp >  80.59\n|   |   |   |--- class: 0\n|--- max_pkts >  12.50\n|   |--- mean_bpp <= 99.79\n|   |   |--- mean_ndst <= 4.96\n|   |   |   |--- class: 1\n|   |   |--- mean_ndst >  4.96\n|   |   |   |--- class: 0\n|   |--- mean_bpp >  99.79\n|   |   |--- mean_synack <= 0.04\n|   |   |   |--- class: 0\n|   |   |--- mean_synack >  0.04\n|   |   |   |--- class: 1\n",
+  "depth": 3
+ }
+}

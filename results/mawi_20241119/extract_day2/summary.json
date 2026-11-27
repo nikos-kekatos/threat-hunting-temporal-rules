@@ -1,0 +1,28 @@
+{
+ "packets": 95483143,
+ "v4": 82683464,
+ "v6": 12799679,
+ "anomalous": 13705445,
+ "suspicious": 25775411,
+ "notice": 24816320,
+ "sources": 5839664,
+ "duration_s": 899.64,
+ "rules": 879,
+ "rules_dropped_ipless": [
+  [
+   "None",
+   "None",
+   "25",
+   "mptmp",
+   "anomalous"
+  ]
+ ],
+ "hosts_anomalous": 3292,
+ "hosts_benign": 9840,
+ "params": {
+  "min_pkts": 50,
+  "min_anom_frac": 0.2,
+  "benign_per_anom": 3,
+  "max_packets": null
+ }
+}

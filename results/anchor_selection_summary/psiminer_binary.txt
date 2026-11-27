@@ -1,0 +1,6 @@
+binary ../PSIMiner/build/psiMiner
+source commit b0d03160a5a2aab00a43b31c3deb0e9036eb8ce4 Sun Mar 7 14:01:02 2021 +0100 (github.com/antoniobruto/PSIMiner)
+tracked sources unmodified
+sha256 146f3c9366364dd9014441495161c95ce94978e13575987196f36b9af0fb85ad
+source-level indexing fix (ignorePredicate(j) -> j+1): NOT applied; all runs use the unmodified binary, MAWI runs with drop_constant=True use the vocabulary workaround
+

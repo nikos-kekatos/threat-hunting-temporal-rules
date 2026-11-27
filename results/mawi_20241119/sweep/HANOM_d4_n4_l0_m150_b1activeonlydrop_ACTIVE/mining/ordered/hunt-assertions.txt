@@ -1,0 +1,7 @@
+ASSERTION LIST: 
+
+
+****************** TARGET [HANOM] ********************
+!SYN_DOM && DPORT_VMANY|=> ##[ 0.000000 : 4.000000 ] HANOM
+SUPPORT		= [2.191525]
+CORRELATION	= [6.446599]

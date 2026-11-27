@@ -1,0 +1,309 @@
+{
+ "params": {
+  "mine_dir": "./code/../results_dc/mine_s1",
+  "lags": 3,
+  "seed": 1,
+  "max_neg_bins": 50000,
+  "planted": "",
+  "shap_k": 3,
+  "anchors": 20,
+  "out": "xai_L3.json"
+ },
+ "n_test": 13877,
+ "base_rate": 0.2524,
+ "methods": [
+  {
+   "method": "psiminer",
+   "view": "temporal",
+   "skipped": "PSIMiner crashed (exit -11)"
+  },
+  {
+   "method": "tree_d3",
+   "view": "host",
+   "host": {
+    "tp": 2604,
+    "fp": 2742,
+    "fn": 899,
+    "tn": 7632,
+    "precision": 0.4871,
+    "precision_ci": [
+     0.4737,
+     0.5005
+    ],
+    "recall": 0.7434,
+    "recall_ci": [
+     0.7286,
+     0.7576
+    ],
+    "f1": 0.5885
+   },
+   "host_permuted": {
+    "tp": 2604,
+    "fp": 2742,
+    "fn": 899,
+    "tn": 7632,
+    "precision": 0.4871,
+    "precision_ci": [
+     0.4737,
+     0.5005
+    ],
+    "recall": 0.7434,
+    "recall_ci": [
+     0.7286,
+     0.7576
+    ],
+    "f1": 0.5885
+   },
+   "size": "7 leaves",
+   "explanation": "|--- max_pkts <= 9.50\n|   |--- mean_ndport <= 1.00\n|   |   |--- mean_pkts <= 4.96\n|   |   |   |--- class: 0\n|   |   |--- mean_pkts >  4.96\n|   |   |   |--- class: 1\n|   |--- mean_ndport >  1.00\n|   |   |--- class: 0\n|--- max_pkts >  9.50\n|   |--- mean_bpp <= 86.44\n|   |   |--- mean_syn_pct <= 27.23\n|   |   |   |--- class: 1\n|   |   |--- mean_syn_pct >  27.23\n|   |   |   |--- class: 0\n|   |--- mean_bpp >  86.44\n|   |   |--- max_synack <= 0.50\n|   |   |   |--- class: 0\n|   |   |--- max_synack >  0.50\n|   |   |   |--- class: 1\n",
+   "planted_recovered": null
+  },
+  {
+   "method": "ripper",
+   "view": "host",
+   "host": {
+    "tp": 2610,
+    "fp": 2990,
+    "fn": 893,
+    "tn": 7384,
+    "precision": 0.4661,
+    "precision_ci": [
+     0.453,
+     0.4792
+    ],
+    "recall": 0.7451,
+    "recall_ci": [
+     0.7304,
+     0.7592
+    ],
+    "f1": 0.5734
+   },
+   "host_permuted": {
+    "tp": 2610,
+    "fp": 2990,
+    "fn": 893,
+    "tn": 7384,
+    "precision": 0.4661,
+    "precision_ci": [
+     0.453,
+     0.4792
+    ],
+    "recall": 0.7451,
+    "recall_ci": [
+     0.7304,
+     0.7592
+    ],
+    "f1": 0.5734
+   },
+   "size": "10 rules, 14 conds",
+   "explanation": "[[max_bpp=73.0-82.0] V [max_pkts=12.0-18.0] V [mean_bpp=71.92-78.91^max_ndport=<1.0] V [max_pkts=24.0-29.4] V [max_pkts=29.4-41.0^max_syn_pct=<1.5] V [max_synack=1.0^max_small_pct=>83.0] V [mean_bpp=60.0-71.92^mean_udp_pct=>91.57] V [mean_small_pct=83.0-95.33] V [mean_small_pct=80.65-83.0] V [max_synack=3.0]]",
+   "planted_recovered": null
+  },
+  {
+   "method": "gbm+shap",
+   "view": "host",
+   "host": {
+    "tp": 2885,
+    "fp": 1833,
+    "fn": 618,
+    "tn": 8541,
+    "precision": 0.6115,
+    "precision_ci": [
+     0.5975,
+     0.6253
+    ],
+    "recall": 0.8236,
+    "recall_ci": [
+     0.8106,
+     0.8358
+    ],
+    "f1": 0.7019
+   },
+   "host_permuted": {
+    "tp": 2885,
+    "fp": 1833,
+    "fn": 618,
+    "tn": 8541,
+    "precision": 0.6115,
+    "precision_ci": [
+     0.5975,
+     0.6253
+    ],
+    "recall": 0.8236,
+    "recall_ci": [
+     0.8106,
+     0.8358
+    ],
+    "f1": 0.7019
+   },
+   "size": "top-3 of 21 features",
+   "explanation": "max_pkts, mean_bpp, mean_pkts",
+   "planted_recovered": null
+  },
+  {
+   "method": "tree_d3",
+   "view": "bin",
+   "host": {
+    "tp": 3492,
+    "fp": 9155,
+    "fn": 11,
+    "tn": 1219,
+    "precision": 0.2761,
+    "precision_ci": [
+     0.2684,
+     0.284
+    ],
+    "recall": 0.9969,
+    "recall_ci": [
+     0.9944,
+     0.9982
+    ],
+    "f1": 0.4324
+   },
+   "host_permuted": {
+    "tp": 3492,
+    "fp": 9155,
+    "fn": 11,
+    "tn": 1219,
+    "precision": 0.2761,
+    "precision_ci": [
+     0.2684,
+     0.284
+    ],
+    "recall": 0.9969,
+    "recall_ci": [
+     0.9944,
+     0.9982
+    ],
+    "f1": 0.4324
+   },
+   "size": "5 leaves",
+   "explanation": "|--- ACTIVE_lag0 <= 0.50\n|   |--- class: 0\n|--- ACTIVE_lag0 >  0.50\n|   |--- SYN_DOM_lag0 <= 0.50\n|   |   |--- UDP_DOM_lag3 <= 0.50\n|   |   |   |--- class: 1\n|   |   |--- UDP_DOM_lag3 >  0.50\n|   |   |   |--- class: 1\n|   |--- SYN_DOM_lag0 >  0.50\n|   |   |--- SYN_DOM_lag1 <= 0.50\n|   |   |   |--- class: 0\n|   |   |--- SYN_DOM_lag1 >  0.50\n|   |   |   |--- class: 0\n",
+   "planted_recovered": null
+  },
+  {
+   "method": "ripper",
+   "view": "bin",
+   "host": {
+    "tp": 3492,
+    "fp": 9157,
+    "fn": 11,
+    "tn": 1217,
+    "precision": 0.2761,
+    "precision_ci": [
+     0.2683,
+     0.2839
+    ],
+    "recall": 0.9969,
+    "recall_ci": [
+     0.9944,
+     0.9982
+    ],
+    "f1": 0.4324
+   },
+   "host_permuted": {
+    "tp": 3492,
+    "fp": 9158,
+    "fn": 11,
+    "tn": 1216,
+    "precision": 0.276,
+    "precision_ci": [
+     0.2683,
+     0.2839
+    ],
+    "recall": 0.9969,
+    "recall_ci": [
+     0.9944,
+     0.9982
+    ],
+    "f1": 0.4324
+   },
+   "size": "5 rules, 14 conds",
+   "explanation": "[[ACTIVE_lag0=1^UDP_DOM_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^SMALL_DOM_lag1=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^SMALL_DOM_lag2=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0]]",
+   "planted_recovered": null
+  },
+  {
+   "method": "gbm+shap",
+   "view": "bin",
+   "host": {
+    "tp": 3416,
+    "fp": 7126,
+    "fn": 87,
+    "tn": 3248,
+    "precision": 0.324,
+    "precision_ci": [
+     0.3152,
+     0.333
+    ],
+    "recall": 0.9752,
+    "recall_ci": [
+     0.9695,
+     0.9798
+    ],
+    "f1": 0.4864
+   },
+   "host_permuted": {
+    "tp": 3335,
+    "fp": 7105,
+    "fn": 168,
+    "tn": 3269,
+    "precision": 0.3194,
+    "precision_ci": [
+     0.3106,
+     0.3285
+    ],
+    "recall": 0.952,
+    "recall_ci": [
+     0.9445,
+     0.9586
+    ],
+    "f1": 0.4784
+   },
+   "size": "top-3 of 52 features",
+   "explanation": "ACTIVE_lag0, SYN_DOM_lag0, UDP_DOM_lag0",
+   "planted_recovered": null
+  },
+  {
+   "method": "anchors",
+   "view": "bin",
+   "host": {
+    "tp": 851,
+    "fp": 2393,
+    "fn": 2652,
+    "tn": 7981,
+    "precision": 0.2623,
+    "precision_ci": [
+     0.2475,
+     0.2777
+    ],
+    "recall": 0.2429,
+    "recall_ci": [
+     0.229,
+     0.2574
+    ],
+    "f1": 0.2523
+   },
+   "host_permuted": {
+    "tp": 829,
+    "fp": 2662,
+    "fn": 2674,
+    "tn": 7712,
+    "precision": 0.2375,
+    "precision_ci": [
+     0.2236,
+     0.2519
+    ],
+    "recall": 0.2367,
+    "recall_ci": [
+     0.2229,
+     0.251
+    ],
+    "f1": 0.2371
+   },
+   "size": "4 literals (modal of 20 anchors, 16 distinct)",
+   "explanation": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3 && RST_lag0",
+   "planted_recovered": null,
+   "modal_share": 0.15
+  }
+ ]
+}

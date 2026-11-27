@@ -1,0 +1,12 @@
+test hosts 13918, base rate 0.250
+method             view          P      R     F1   F1perm  planted  size
+psiminer_best      temporal  0.000  0.000  0.000    0.000  None     3 literals
+psiminer_trainsel  temporal  0.000  0.000  0.000    0.000  None     3 literals
+psiminer_playbook  temporal  0.000  0.000  0.000        -  None     1 rules
+tree_d3            host      0.514  0.844  0.639    0.639  None     8 leaves
+ripper             host      0.488  0.787  0.602    0.602  None     11 rules, 18 conds
+gbm+shap           host      0.595  0.863  0.704    0.704  None     top-3 of 21 features
+tree_d3            bin       0.177  0.212  0.193    0.193  None     5 leaves
+ripper             bin       0.275  0.997  0.431    0.431  None     3 rules, 22 conds
+gbm+shap           bin       0.309  0.846  0.453    0.451  None     top-3 of 52 features
+anchors            bin       0.377  0.568  0.453    0.456  None     4 literals (modal of 20 anchors, 11 distinct)

@@ -1,0 +1,7 @@
+ASSERTION LIST: 
+
+
+****************** TARGET [HANOM] ********************
+!ACTIVE|=> ##[ 0.000000 : 4.000000 ] !HANOM
+SUPPORT		= [88.052508]
+CORRELATION	= [93.896036]

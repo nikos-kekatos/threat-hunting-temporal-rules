@@ -1,0 +1,7 @@
+ASSERTION LIST: 
+
+
+****************** TARGET [HANOM] ********************
+!UDP_DOM && !ACTIVE && !PKTS_HI && !RST|=> ##[ 0.000000 : 4.000000 ] HANOM
+SUPPORT		= [4.193921]
+CORRELATION	= [66.387171]

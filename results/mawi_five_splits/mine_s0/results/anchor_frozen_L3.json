@@ -1,0 +1,192 @@
+{
+ "params": {
+  "mine_dir": "./code/../results_dc/mine_s0",
+  "lags": 3,
+  "anchors": 20,
+  "seed": 1,
+  "max_neg_bins": 50000,
+  "planted": ""
+ },
+ "n_validation": 6817,
+ "n_test": 6908,
+ "base_rate_test": 0.2567,
+ "candidates": [
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3",
+   "count": 14,
+   "validation_f1": 0.4065
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3 && !SMALL_DOM_lag1",
+   "count": 1,
+   "validation_f1": 0.4065
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag1 && !ACTIVE_lag2 && !ACTIVE_lag3",
+   "count": 1,
+   "validation_f1": 0.4065
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag3 && RST_lag0",
+   "count": 1,
+   "validation_f1": 0.2593
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3 && UDP_DOM_lag0",
+   "count": 1,
+   "validation_f1": 0.2048
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && SYNACK_lag0",
+   "count": 1,
+   "validation_f1": 0.3327
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && UDP_DOM_lag0",
+   "count": 1,
+   "validation_f1": 0.205
+  }
+ ],
+ "methods": [
+  {
+   "method": "anchors_modal (train only)",
+   "query": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3",
+   "size": 3,
+   "test": {
+    "tp": 1773,
+    "fp": 5135,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.2567,
+    "precision_ci": [
+     0.2465,
+     0.2671
+    ],
+    "recall": 1.0,
+    "recall_ci": [
+     0.9978,
+     1.0
+    ],
+    "f1": 0.4085
+   },
+   "validation": {
+    "tp": 1739,
+    "fp": 5078,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.2551,
+    "precision_ci": [
+     0.2449,
+     0.2656
+    ],
+    "recall": 1.0,
+    "recall_ci": [
+     0.9978,
+     1.0
+    ],
+    "f1": 0.4065
+   }
+  },
+  {
+   "method": "anchors_valsel (validation F1)",
+   "query": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3",
+   "size": 3,
+   "test": {
+    "tp": 1773,
+    "fp": 5135,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.2567,
+    "precision_ci": [
+     0.2465,
+     0.2671
+    ],
+    "recall": 1.0,
+    "recall_ci": [
+     0.9978,
+     1.0
+    ],
+    "f1": 0.4085
+   },
+   "validation": {
+    "tp": 1739,
+    "fp": 5078,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.2551,
+    "precision_ci": [
+     0.2449,
+     0.2656
+    ],
+    "recall": 1.0,
+    "recall_ci": [
+     0.9978,
+     1.0
+    ],
+    "f1": 0.4065
+   }
+  },
+  {
+   "method": "gbm (model)",
+   "query": "gradient boosting, 52 features",
+   "size": null,
+   "test": {
+    "tp": 1764,
+    "fp": 3998,
+    "fn": 9,
+    "tn": 1137,
+    "precision": 0.3061,
+    "precision_ci": [
+     0.2944,
+     0.3182
+    ],
+    "recall": 0.9949,
+    "recall_ci": [
+     0.9904,
+     0.9973
+    ],
+    "f1": 0.4682
+   },
+   "validation": {
+    "tp": 1733,
+    "fp": 3929,
+    "fn": 6,
+    "tn": 1149,
+    "precision": 0.3061,
+    "precision_ci": [
+     0.2942,
+     0.3182
+    ],
+    "recall": 0.9965,
+    "recall_ci": [
+     0.9925,
+     0.9984
+    ],
+    "f1": 0.4683
+   }
+  },
+  {
+   "method": "shap_top3_conjunction",
+   "query": "ACTIVE_lag0 && UDP_DOM_lag0 && SYN_DOM_lag0",
+   "size": 3,
+   "test": {
+    "tp": 10,
+    "fp": 200,
+    "fn": 1763,
+    "tn": 4935,
+    "precision": 0.0476,
+    "precision_ci": [
+     0.0261,
+     0.0854
+    ],
+    "recall": 0.0056,
+    "recall_ci": [
+     0.0031,
+     0.0104
+    ],
+    "f1": 0.0101
+   },
+   "validation": null
+  }
+ ]
+}

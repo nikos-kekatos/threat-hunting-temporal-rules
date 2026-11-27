@@ -1,0 +1,5 @@
+validation 6890, test 6822 hosts, test base rate 0.250, 15 anchor candidates from 20 training seconds
+anchors_modal (train only)       valF1 0.523  testP 0.386 R 0.794 F1 0.519 planted None  ACTIVE_lag0 && !ACTIVE_lag2 && !ICMP_lag0 && SMALL_DOM_lag0 && !SYN_DO
+anchors_valsel (validation F1)   valF1 0.532  testP 0.388 R 0.820 F1 0.527 planted None  ACTIVE_lag0 && !ACTIVE_lag2 && !ICMP_lag0 && SMALL_DOM_lag0 && !SYN_DO
+gbm (model)                      valF1 0.478  testP 0.314 R 0.993 F1 0.477 planted None  gradient boosting, 52 features
+shap_top3_conjunction            valF1 -      testP 0.011 R 0.001 F1 0.002 planted None  ACTIVE_lag0 && SYN_DOM_lag0 && UDP_DOM_lag2

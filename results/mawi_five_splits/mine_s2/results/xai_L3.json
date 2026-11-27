@@ -1,0 +1,309 @@
+{
+ "params": {
+  "mine_dir": "./code/../results_dc/mine_s2",
+  "lags": 3,
+  "seed": 1,
+  "max_neg_bins": 50000,
+  "planted": "",
+  "shap_k": 3,
+  "anchors": 20,
+  "out": "xai_L3.json"
+ },
+ "n_test": 13974,
+ "base_rate": 0.249,
+ "methods": [
+  {
+   "method": "psiminer",
+   "view": "temporal",
+   "skipped": "PSIMiner crashed (exit -11)"
+  },
+  {
+   "method": "tree_d3",
+   "view": "host",
+   "host": {
+    "tp": 3139,
+    "fp": 4913,
+    "fn": 341,
+    "tn": 5581,
+    "precision": 0.3898,
+    "precision_ci": [
+     0.3792,
+     0.4005
+    ],
+    "recall": 0.902,
+    "recall_ci": [
+     0.8917,
+     0.9115
+    ],
+    "f1": 0.5444
+   },
+   "host_permuted": {
+    "tp": 3139,
+    "fp": 4913,
+    "fn": 341,
+    "tn": 5581,
+    "precision": 0.3898,
+    "precision_ci": [
+     0.3792,
+     0.4005
+    ],
+    "recall": 0.902,
+    "recall_ci": [
+     0.8917,
+     0.9115
+    ],
+    "f1": 0.5444
+   },
+   "size": "7 leaves",
+   "explanation": "|--- max_pkts <= 12.50\n|   |--- max_syn_pct <= 75.00\n|   |   |--- mean_bpp <= 78.80\n|   |   |   |--- class: 1\n|   |   |--- mean_bpp >  78.80\n|   |   |   |--- class: 0\n|   |--- max_syn_pct >  75.00\n|   |   |--- max_rst <= 1.50\n|   |   |   |--- class: 0\n|   |   |--- max_rst >  1.50\n|   |   |   |--- class: 0\n|--- max_pkts >  12.50\n|   |--- max_ndst <= 6.50\n|   |   |--- mean_bpp <= 86.31\n|   |   |   |--- class: 1\n|   |   |--- mean_bpp >  86.31\n|   |   |   |--- class: 1\n|   |--- max_ndst >  6.50\n|   |   |--- class: 0\n",
+   "planted_recovered": null
+  },
+  {
+   "method": "ripper",
+   "view": "host",
+   "host": {
+    "tp": 1457,
+    "fp": 691,
+    "fn": 2023,
+    "tn": 9803,
+    "precision": 0.6783,
+    "precision_ci": [
+     0.6582,
+     0.6977
+    ],
+    "recall": 0.4187,
+    "recall_ci": [
+     0.4024,
+     0.4352
+    ],
+    "f1": 0.5178
+   },
+   "host_permuted": {
+    "tp": 1457,
+    "fp": 691,
+    "fn": 2023,
+    "tn": 9803,
+    "precision": 0.6783,
+    "precision_ci": [
+     0.6582,
+     0.6977
+    ],
+    "recall": 0.4187,
+    "recall_ci": [
+     0.4024,
+     0.4352
+    ],
+    "f1": 0.5178
+   },
+   "size": "3 rules, 4 conds",
+   "explanation": "[[max_bpp=70.9-81.0] V [mean_udp_pct=<7.34^mean_syn_pct=17.0-31.65] V [mean_bpp=71.68-78.98]]",
+   "planted_recovered": null
+  },
+  {
+   "method": "gbm+shap",
+   "view": "host",
+   "host": {
+    "tp": 2926,
+    "fp": 2283,
+    "fn": 554,
+    "tn": 8211,
+    "precision": 0.5617,
+    "precision_ci": [
+     0.5482,
+     0.5751
+    ],
+    "recall": 0.8408,
+    "recall_ci": [
+     0.8283,
+     0.8526
+    ],
+    "f1": 0.6735
+   },
+   "host_permuted": {
+    "tp": 2926,
+    "fp": 2283,
+    "fn": 554,
+    "tn": 8211,
+    "precision": 0.5617,
+    "precision_ci": [
+     0.5482,
+     0.5751
+    ],
+    "recall": 0.8408,
+    "recall_ci": [
+     0.8283,
+     0.8526
+    ],
+    "f1": 0.6735
+   },
+   "size": "top-3 of 21 features",
+   "explanation": "max_pkts, mean_bpp, mean_small_pct",
+   "planted_recovered": null
+  },
+  {
+   "method": "tree_d3",
+   "view": "bin",
+   "host": {
+    "tp": 3472,
+    "fp": 8432,
+    "fn": 8,
+    "tn": 2062,
+    "precision": 0.2917,
+    "precision_ci": [
+     0.2836,
+     0.2999
+    ],
+    "recall": 0.9977,
+    "recall_ci": [
+     0.9955,
+     0.9988
+    ],
+    "f1": 0.4514
+   },
+   "host_permuted": {
+    "tp": 3472,
+    "fp": 8432,
+    "fn": 8,
+    "tn": 2062,
+    "precision": 0.2917,
+    "precision_ci": [
+     0.2836,
+     0.2999
+    ],
+    "recall": 0.9977,
+    "recall_ci": [
+     0.9955,
+     0.9988
+    ],
+    "f1": 0.4514
+   },
+   "size": "5 leaves",
+   "explanation": "|--- ACTIVE_lag0 <= 0.50\n|   |--- class: 0\n|--- ACTIVE_lag0 >  0.50\n|   |--- SYN_DOM_lag0 <= 0.50\n|   |   |--- ICMP_lag0 <= 0.50\n|   |   |   |--- class: 1\n|   |   |--- ICMP_lag0 >  0.50\n|   |   |   |--- class: 0\n|   |--- SYN_DOM_lag0 >  0.50\n|   |   |--- SYN_DOM_lag1 <= 0.50\n|   |   |   |--- class: 0\n|   |   |--- SYN_DOM_lag1 >  0.50\n|   |   |   |--- class: 0\n",
+   "planted_recovered": null
+  },
+  {
+   "method": "ripper",
+   "view": "bin",
+   "host": {
+    "tp": 3471,
+    "fp": 8759,
+    "fn": 9,
+    "tn": 1735,
+    "precision": 0.2838,
+    "precision_ci": [
+     0.2759,
+     0.2919
+    ],
+    "recall": 0.9974,
+    "recall_ci": [
+     0.9951,
+     0.9986
+    ],
+    "f1": 0.4419
+   },
+   "host_permuted": {
+    "tp": 3472,
+    "fp": 8785,
+    "fn": 8,
+    "tn": 1709,
+    "precision": 0.2833,
+    "precision_ci": [
+     0.2754,
+     0.2913
+    ],
+    "recall": 0.9977,
+    "recall_ci": [
+     0.9955,
+     0.9988
+    ],
+    "f1": 0.4413
+   },
+   "size": "61 rules, 543 conds",
+   "explanation": "[[ACTIVE_lag0=1^SYN_DOM_lag0=0^PKTS_HI_lag0=1^SMALL_DOM_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^UDP_DOM_lag0=1^ACTIVE_lag1=0^SMALL_DOM_lag0=1^UDP_DOM_lag3=0^SMALL_DOM_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^UDP_DOM_lag0=1^SMALL_DOM_lag3=0^UDP_DOM_lag3=1^PKTS_HI_lag0=0^ACTIVE_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^UDP_DOM_lag0=1^SMALL_DOM_lag2=0^UDP_DOM_lag2=1^UDP_DOM_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^ACTIVE_lag3=0^ICMP_lag0=0^SMALL_DOM_lag0=1^UDP_DOM_lag0=1^ACTIVE_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^UDP_DOM_lag0=1^SMALL_DOM_lag0=0^UDP_DOM_lag1=1^UDP_DOM_lag3=1^PKTS_HI_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^UDP_DOM_lag0=1^PKTS_HI_lag0=0^SMALL_DOM_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^BPP_LARGE_lag0=1^PKTS_HI_lag0=1^BPP_LARGE_lag2=1^UDP_DOM_lag0=0^PKTS_HI_lag2=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^SMALL_DOM_lag0=1^ACTIVE_lag1=1^SYNACK_lag1=0^UDP_DOM_lag0=0^SMALL_DOM_lag1=0^RST_lag0=0^PKTS_HI_lag1=0^RST_lag1=0^SYN_DOM_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^ICMP_lag0=0^PKTS_HI_lag0=1^UDP_DOM_lag0=0^BPP_LARGE_lag1=1^PKTS_HI_lag1=1^SYNACK_lag1=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^ICMP_lag0=0^SYNACK_lag1=0^UDP_DOM_lag0=0^PKTS_HI_lag0=1^SYNACK_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^SMALL_DOM_lag0=1^UDP_DOM_lag1=0^SMALL_DOM_lag1=1^SYN_DOM_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^ICMP_lag0=0^SYNACK_lag0=0^SYNACK_lag1=0^UDP_DOM_lag0=0^RST_lag1=0^ACTIVE_lag1=1^RST_lag0=1^PKTS_HI_lag0=0^SMALL_DOM_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ICMP_lag0=0^ACTIVE_lag2=0^ACTIVE_lag1=0^SYNACK_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag0=1^BPP_LARGE_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag1=0^UDP_DOM_lag3=1^UDP_DOM_lag0=0^SMALL_DOM_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^ACTIVE_lag1=0^SYNACK_lag0=0^SMALL_DOM_lag0=1^RST_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^SMALL_DOM_lag0=0^PKTS_HI_lag2=0^UDP_DOM_lag2=1^PKTS_HI_lag0=0^PKTS_HI_lag3=0^PKTS_HI_lag1=0^UDP_DOM_lag3=1^ICMP_lag3=0^UDP_DOM_lag1=1^SYN_DOM_lag1=0^SYN_DOM_lag3=0^UDP_DOM_lag0=1^SYNACK_lag0=0^BPP_LARGE_lag1=0^SYN_DOM_lag2=0^RST_lag2=0^RST_lag3=0^SMALL_DOM_lag2=0^SMALL_DOM_lag1=0^BPP_LARGE_lag0=0^SYNACK_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ICMP_lag0=0^ACTIVE_lag2=0^SYNACK_lag1=0^SYNACK_lag0=0^UDP_DOM_lag0=0^BPP_LARGE_lag1=1^PKTS_HI_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ICMP_lag0=0^SMALL_DOM_lag0=0^UDP_DOM_lag2=1^PKTS_HI_lag2=0^SMALL_DOM_lag1=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^ICMP_lag0=0^ACTIVE_lag2=0^ACTIVE_lag1=0^SYNACK_lag0=0^BPP_LARGE_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag3=0^UDP_DOM_lag2=1^SMALL_DOM_lag0=0^PKTS_HI_lag2=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag1=0^SMALL_DOM_lag1=1^PKTS_HI_lag1=1^PKTS_HI_lag2=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag1=0^ICMP_lag0=0^ACTIVE_lag1=0^UDP_DOM_lag2=1^SMALL_DOM_lag3=0^UDP_DOM_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag3=0^SMALL_DOM_lag1=1^SMALL_DOM_lag2=1^PKTS_HI_lag1=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag2=0^PKTS_HI_lag1=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^SMALL_DOM_lag2=1^PKTS_HI_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag1=0^SYNACK_lag0=1^ACTIVE_lag2=1^UDP_DOM_lag1=0^PKTS_HI_lag0=1^ACTIVE_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag2=0^ACTIVE_lag1=0^PKTS_HI_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag3=0^SYNACK_lag0=1^ACTIVE_lag1=1^ACTIVE_lag2=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^SYNACK_lag0=1^SYNACK_lag1=1^PKTS_HI_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag3=0^ACTIVE_lag2=0^SYNACK_lag1=0^ACTIVE_lag1=1^SYN_DOM_lag1=0^RST_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^ACTIVE_lag3=0^SMALL_DOM_lag1=1^SYN_DOM_lag1=0^SMALL_DOM_lag0=1^RST_lag2=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^ICMP_lag0=0^SYNACK_lag0=1^SYNACK_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^ICMP_lag0=0^ACTIVE_lag3=0^SYNACK_lag1=0^ACTIVE_lag1=1^UDP_DOM_lag1=0^SYN_DOM_lag1=0^RST_lag1=0^SMALL_DOM_lag1=1^SYNACK_lag0=0^PKTS_HI_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^SMALL_DOM_lag3=1^PKTS_HI_lag2=1^PKTS_HI_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag3=0^SMALL_DOM_lag3=1^SMALL_DOM_lag2=1^SMALL_DOM_lag1=1^SYN_DOM_lag1=0^RST_lag1=0^RST_lag2=0^SMALL_DOM_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag0=0^SYNACK_lag2=1^SYNACK_lag1=1^PKTS_HI_lag1=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^ICMP_lag0=0^UDP_DOM_lag1=0^SMALL_DOM_lag3=1^RST_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^ICMP_lag0=0^SYNACK_lag0=1^SMALL_DOM_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag2=0^SYNACK_lag0=1^BPP_LARGE_lag0=0^UDP_DOM_lag3=0^ACTIVE_lag2=1^ACTIVE_lag3=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ACTIVE_lag2=0^ICMP_lag0=0^ACTIVE_lag1=0^SYNACK_lag0=1^SMALL_DOM_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^BPP_LARGE_lag0=1^BPP_LARGE_lag3=1^UDP_DOM_lag1=1^BPP_LARGE_lag1=1^BPP_LARGE_lag2=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag0=0^ACTIVE_lag2=0^ACTIVE_lag3=0^SYNACK_lag1=0^ACTIVE_lag1=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag3=0^SYNACK_lag0=1^UDP_DOM_lag3=0^ACTIVE_lag2=0^BPP_LARGE_lag0=1^ACTIVE_lag3=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag1=0^BPP_LARGE_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag0=0^ACTIVE_lag1=0^ACTIVE_lag2=0^SYNACK_lag0=1^UDP_DOM_lag3=0^ACTIVE_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag3=0^SYNACK_lag2=1^SMALL_DOM_lag0=0^SYNACK_lag0=0^PKTS_HI_lag1=1^BPP_LARGE_lag3=0^SYNACK_lag1=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag0=0^ACTIVE_lag1=0^ACTIVE_lag3=0^SMALL_DOM_lag0=0^SMALL_DOM_lag2=1^RST_lag2=0^SYNACK_lag0=0^BPP_LARGE_lag0=0^SYN_DOM_lag2=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag0=0^SMALL_DOM_lag3=1^UDP_DOM_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag1=0^SYNACK_lag3=1^SMALL_DOM_lag2=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag3=0^ACTIVE_lag1=0^ACTIVE_lag2=0^BPP_LARGE_lag0=0^RST_lag0=0^SMALL_DOM_lag0=1^SYNACK_lag3=0^SMALL_DOM_lag3=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag0=0^SYNACK_lag2=1^SMALL_DOM_lag0=0^BPP_LARGE_lag2=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag2=0^ICMP_lag0=0^PKTS_HI_lag3=0^SYNACK_lag1=1^ACTIVE_lag3=1^SYNACK_lag3=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^UDP_DOM_lag0=0^ICMP_lag0=0^PKTS_HI_lag2=0^ACTIVE_lag1=0^ACTIVE_lag2=0^SMALL_DOM_lag3=1^RST_lag0=0^SYNACK_lag3=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag1=0^ACTIVE_lag2=0^ACTIVE_lag3=0^SYNACK_lag0=1^RST_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag0=0^ACTIVE_lag3=1^SMALL_DOM_lag3=1^SYN_DOM_lag2=0^PKTS_HI_lag2=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag3=0^SYNACK_lag3=1^ACTIVE_lag1=1^PKTS_HI_lag1=0^SYNACK_lag1=0^BPP_LARGE_lag2=0^RST_lag0=0^SMALL_DOM_lag0=0] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag3=0^RST_lag2=0^SMALL_DOM_lag2=1^ACTIVE_lag1=1^ACTIVE_lag3=0^SMALL_DOM_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag2=0^SMALL_DOM_lag0=0^ACTIVE_lag3=1^ACTIVE_lag2=1^RST_lag3=0^UDP_DOM_lag2=0^RST_lag2=0^BPP_LARGE_lag0=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag3=0^SMALL_DOM_lag0=0^SMALL_DOM_lag2=1^SMALL_DOM_lag1=1^RST_lag3=0^SMALL_DOM_lag3=1] V [ACTIVE_lag0=1^SYN_DOM_lag0=0^ICMP_lag0=0^UDP_DOM_lag0=0^PKTS_HI_lag1=0^RST_lag0=0^SYNACK_lag1=1^BPP_LARGE_lag0=1^BPP_LARGE_lag1=0]]",
+   "planted_recovered": null
+  },
+  {
+   "method": "gbm+shap",
+   "view": "bin",
+   "host": {
+    "tp": 3468,
+    "fp": 8208,
+    "fn": 12,
+    "tn": 2286,
+    "precision": 0.297,
+    "precision_ci": [
+     0.2888,
+     0.3054
+    ],
+    "recall": 0.9966,
+    "recall_ci": [
+     0.994,
+     0.998
+    ],
+    "f1": 0.4576
+   },
+   "host_permuted": {
+    "tp": 3469,
+    "fp": 8275,
+    "fn": 11,
+    "tn": 2219,
+    "precision": 0.2954,
+    "precision_ci": [
+     0.2872,
+     0.3037
+    ],
+    "recall": 0.9968,
+    "recall_ci": [
+     0.9943,
+     0.9982
+    ],
+    "f1": 0.4557
+   },
+   "size": "top-3 of 52 features",
+   "explanation": "ACTIVE_lag0, SYN_DOM_lag0, UDP_DOM_lag0",
+   "planted_recovered": null
+  },
+  {
+   "method": "anchors",
+   "view": "bin",
+   "host": {
+    "tp": 3480,
+    "fp": 10494,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.249,
+    "precision_ci": [
+     0.2419,
+     0.2563
+    ],
+    "recall": 1.0,
+    "recall_ci": [
+     0.9989,
+     1.0
+    ],
+    "f1": 0.3988
+   },
+   "host_permuted": {
+    "tp": 3480,
+    "fp": 10494,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.249,
+    "precision_ci": [
+     0.2419,
+     0.2563
+    ],
+    "recall": 1.0,
+    "recall_ci": [
+     0.9989,
+     1.0
+    ],
+    "f1": 0.3988
+   },
+   "size": "3 literals (modal of 20 anchors, 4 distinct)",
+   "explanation": "ACTIVE_lag0 && !ACTIVE_lag1 && !ACTIVE_lag2",
+   "planted_recovered": null,
+   "modal_share": 0.7
+  }
+ ]
+}

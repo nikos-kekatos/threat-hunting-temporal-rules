@@ -1,0 +1,66 @@
+diff --git a/code/psiMinerStructs.c b/code/psiMinerStructs.c
+index 3b1125a..60b08a9 100644
+--- a/code/psiMinerStructs.c
++++ b/code/psiMinerStructs.c
+@@ -873,6 +873,8 @@ struct intervalListStruct* intersectIntervalList(struct intervalListStruct* list
+ 			iterator2 = list2;
+ 			
+ 			while(iterator2){
++				if(!iterator1->interval) break;	/* empty entry (duplicateIntervalList keeps NULL intervals) */
++				if(!iterator2->interval){ iterator2 = iterator2->next; continue; }
+ 				if(iterator1->interval->r < iterator2->interval->l)
+ 					break;
+ 				
+@@ -5414,8 +5416,8 @@ void writeAssertionWithTruthToStruct(struct assertionStruct* assertion, struct l
+ 		}
+ 		
+ 		//Compute Bucket Separation Intervals
+-		struct intervalStruct* bucketSepIntervals[bucketCount];	//Store separation intervals
+-		bzero(bucketSepIntervals,sizeof(struct intervalStruct*)*bucketCount);
++		struct intervalStruct* bucketSepIntervals[bucketCount+1];	//Store separation intervals (0..bucketCount)
++		bzero(bucketSepIntervals,sizeof(struct intervalStruct*)*(bucketCount+1));
+ 		int i;
+ 		
+ 		int smallestBucketID = getSmallestBucketID(node->truthList);
+@@ -5655,8 +5657,8 @@ void printAssertionWithTruthToFile(struct listOfIntervalListsStruct** learnedInt
+ 		}
+ 		
+ 		//Compute Bucket Separation Intervals
+-		struct intervalStruct* bucketSepIntervals[bucketCount];	//Store separation intervals
+-		bzero(bucketSepIntervals,sizeof(struct intervalStruct*)*bucketCount);
++		struct intervalStruct* bucketSepIntervals[bucketCount+1];	//Store separation intervals (0..bucketCount)
++		bzero(bucketSepIntervals,sizeof(struct intervalStruct*)*(bucketCount+1));
+ 		int i;
+ 		
+ 		//printTruthListToFilePtr(node->truthList,logFile);
+@@ -6189,7 +6191,7 @@ FILE* getDTreeFilePtr(){
+ FILE* getDTreeFilePtrWithName(char* name){
+ 	static int opened=0;
+ 	if(name){
+-		char fileNewName[15+strlen(name)];
++		char fileNewName[16+strlen(name)];
+ 		sprintf(fileNewName,"logs/dtree-%s.txt",name);
+ 		
+ 		if(!opened){
+@@ -6599,7 +6601,7 @@ void deletePredicateDetails(struct predicateDetail* node){
+ 
+ char* convertToDatFileName(char* temp){
+ 	if(temp){
+-		char* datFileName = (char*)malloc(sizeof(char)*strlen(temp));
++		char* datFileName = (char*)malloc(sizeof(char)*(strlen(temp)+1));
+ 		strcpy(datFileName,temp);
+ 		char* tempF = datFileName;
+ 		while(*tempF!='\0' && *tempF!='.'){
+diff --git a/code/structs.c b/code/structs.c
+index 179683a..a37a15a 100644
+--- a/code/structs.c
++++ b/code/structs.c
+@@ -1470,7 +1470,7 @@ void printCSV(FILE* fp,struct file* predicateMap,char* csvFile){
+         if(fp && predicateMap && csvFile){
+                 fprintf(fp,"with open('%s','r') as f:\n",csvFile);
+                 char* prefix = (char*)malloc(sizeof(char)*MAX_STR_LENGTH);
+-                char* datFileName = (char*)malloc(sizeof(char)*strlen(csvFile));
++                char* datFileName = (char*)malloc(sizeof(char)*(strlen(csvFile)+1));
+ 		
+ 		strcpy(datFileName,csvFile);
+ 		char* tempF = datFileName;

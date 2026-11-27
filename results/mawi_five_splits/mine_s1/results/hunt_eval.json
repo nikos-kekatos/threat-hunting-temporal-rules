@@ -1,0 +1,372 @@
+{
+ "n_test": 13877,
+ "n_test_anomalous": 3503,
+ "n_train": 300,
+ "rules": {
+  "ordered": [],
+  "permuted": []
+ },
+ "playbook_ordered": {
+  "tp": 0,
+  "fp": 0,
+  "fn": 3503,
+  "tn": 10374,
+  "precision": 0.0,
+  "precision_ci": [
+   0.0,
+   0.0
+  ],
+  "recall": 0.0,
+  "recall_ci": [
+   0.0,
+   0.0011
+  ],
+  "f1": 0.0
+ },
+ "playbook_recall_by_taxonomy": {
+  "alphfl": [
+   0,
+   1
+  ],
+  "mptmp": [
+   0,
+   732
+  ],
+  "mptp": [
+   0,
+   2732
+  ],
+  "ntscICecrqICecrprp": [
+   0,
+   1
+  ],
+  "ntscSYN": [
+   0,
+   5
+  ],
+  "ntscUDPOther": [
+   0,
+   1
+  ],
+  "ntscUDPUDPrp": [
+   0,
+   27
+  ],
+  "ptmp": [
+   0,
+   1
+  ],
+  "ptmplaHTTP": [
+   0,
+   1
+  ],
+  "salphfl": [
+   0,
+   1
+  ],
+  "sntscSYN": [
+   0,
+   1
+  ]
+ },
+ "playbook_permuted": {
+  "tp": 0,
+  "fp": 0,
+  "fn": 3503,
+  "tn": 10374,
+  "precision": 0.0,
+  "precision_ci": [
+   0.0,
+   0.0
+  ],
+  "recall": 0.0,
+  "recall_ci": [
+   0.0,
+   0.0011
+  ],
+  "f1": 0.0
+ },
+ "expert": [
+  {
+   "name": "H1 network scan",
+   "antecedent": "DST_MANY && SYN_DOM",
+   "host": {
+    "tp": 7,
+    "fp": 364,
+    "fn": 3496,
+    "tn": 10010,
+    "precision": 0.0189,
+    "precision_ci": [
+     0.0092,
+     0.0384
+    ],
+    "recall": 0.002,
+    "recall_ci": [
+     0.001,
+     0.0041
+    ],
+    "f1": 0.0036
+   },
+   "bin_confidence": 0.0007,
+   "bin_completions": 20026
+  },
+  {
+   "name": "H2 port scan",
+   "antecedent": "DPORT_MANY && SYN_DOM",
+   "host": {
+    "tp": 3,
+    "fp": 55,
+    "fn": 3500,
+    "tn": 10319,
+    "precision": 0.0517,
+    "precision_ci": [
+     0.0177,
+     0.1414
+    ],
+    "recall": 0.0009,
+    "recall_ci": [
+     0.0003,
+     0.0025
+    ],
+    "f1": 0.0017
+   },
+   "bin_confidence": 0.0017,
+   "bin_completions": 2901
+  },
+  {
+   "name": "H3 SYN flood",
+   "antecedent": "PKTS_HI && SYN_DOM && SMALL_DOM",
+   "host": {
+    "tp": 7,
+    "fp": 179,
+    "fn": 3496,
+    "tn": 10195,
+    "precision": 0.0376,
+    "precision_ci": [
+     0.0183,
+     0.0756
+    ],
+    "recall": 0.002,
+    "recall_ci": [
+     0.001,
+     0.0041
+    ],
+    "f1": 0.0038
+   },
+   "bin_confidence": 0.0034,
+   "bin_completions": 3819
+  },
+  {
+   "name": "H4 ICMP sweep",
+   "antecedent": "ICMP && DST_MANY",
+   "host": {
+    "tp": 3,
+    "fp": 226,
+    "fn": 3500,
+    "tn": 10148,
+    "precision": 0.0131,
+    "precision_ci": [
+     0.0045,
+     0.0378
+    ],
+    "recall": 0.0009,
+    "recall_ci": [
+     0.0003,
+     0.0025
+    ],
+    "f1": 0.0016
+   },
+   "bin_confidence": 0.2782,
+   "bin_completions": 3296
+  },
+  {
+   "name": "H5 UDP scan",
+   "antecedent": "UDP_DOM && DPORT_MANY",
+   "host": {
+    "tp": 11,
+    "fp": 212,
+    "fn": 3492,
+    "tn": 10162,
+    "precision": 0.0493,
+    "precision_ci": [
+     0.0278,
+     0.0862
+    ],
+    "recall": 0.0031,
+    "recall_ci": [
+     0.0018,
+     0.0056
+    ],
+    "f1": 0.0059
+   },
+   "bin_confidence": 0.0455,
+   "bin_completions": 19328
+  },
+  {
+   "name": "H6 rejected conn",
+   "antecedent": "RST && PKTS_HI",
+   "host": {
+    "tp": 411,
+    "fp": 845,
+    "fn": 3092,
+    "tn": 9529,
+    "precision": 0.3272,
+    "precision_ci": [
+     0.3018,
+     0.3537
+    ],
+    "recall": 0.1173,
+    "recall_ci": [
+     0.1071,
+     0.1284
+    ],
+    "f1": 0.1727
+   },
+   "bin_confidence": 0.2712,
+   "bin_completions": 8856
+  }
+ ],
+ "playbook_expert": {
+  "tp": 418,
+  "fp": 1509,
+  "fn": 3085,
+  "tn": 8865,
+  "precision": 0.2169,
+  "precision_ci": [
+   0.1991,
+   0.2359
+  ],
+  "recall": 0.1193,
+  "recall_ci": [
+   0.109,
+   0.1305
+  ],
+  "f1": 0.154
+ },
+ "playbook_expert_recall_by_taxonomy": {
+  "alphfl": [
+   1,
+   1
+  ],
+  "mptmp": [
+   80,
+   732
+  ],
+  "mptp": [
+   330,
+   2732
+  ],
+  "ntscICecrqICecrprp": [
+   0,
+   1
+  ],
+  "ntscSYN": [
+   5,
+   5
+  ],
+  "ntscUDPOther": [
+   0,
+   1
+  ],
+  "ntscUDPUDPrp": [
+   0,
+   27
+  ],
+  "ptmp": [
+   1,
+   1
+  ],
+  "ptmplaHTTP": [
+   0,
+   1
+  ],
+  "salphfl": [
+   1,
+   1
+  ],
+  "sntscSYN": [
+   0,
+   1
+  ]
+ },
+ "test_by_taxonomy": {
+  "alphfl": 1,
+  "benign": 10374,
+  "mptmp": 732,
+  "mptp": 2732,
+  "ntscICecrqICecrprp": 1,
+  "ntscSYN": 5,
+  "ntscUDPOther": 1,
+  "ntscUDPUDPrp": 27,
+  "ptmp": 1,
+  "ptmplaHTTP": 1,
+  "salphfl": 1,
+  "sntscSYN": 1
+ },
+ "tree_recall_by_taxonomy": {
+  "alphfl": [
+   1,
+   1
+  ],
+  "mptmp": [
+   673,
+   732
+  ],
+  "mptp": [
+   1925,
+   2732
+  ],
+  "ntscICecrqICecrprp": [
+   0,
+   1
+  ],
+  "ntscSYN": [
+   0,
+   5
+  ],
+  "ntscUDPOther": [
+   1,
+   1
+  ],
+  "ntscUDPUDPrp": [
+   2,
+   27
+  ],
+  "ptmp": [
+   1,
+   1
+  ],
+  "ptmplaHTTP": [
+   1,
+   1
+  ],
+  "salphfl": [
+   0,
+   1
+  ],
+  "sntscSYN": [
+   0,
+   1
+  ]
+ },
+ "tree_baseline": {
+  "tp": 2604,
+  "fp": 2742,
+  "fn": 899,
+  "tn": 7632,
+  "precision": 0.4871,
+  "precision_ci": [
+   0.4737,
+   0.5005
+  ],
+  "recall": 0.7434,
+  "recall_ci": [
+   0.7286,
+   0.7576
+  ],
+  "f1": 0.5885,
+  "leaves": 7,
+  "tree": "|--- max_pkts <= 9.50\n|   |--- mean_ndport <= 1.00\n|   |   |--- mean_pkts <= 4.96\n|   |   |   |--- class: 0\n|   |   |--- mean_pkts >  4.96\n|   |   |   |--- class: 1\n|   |--- mean_ndport >  1.00\n|   |   |--- class: 0\n|--- max_pkts >  9.50\n|   |--- mean_bpp <= 86.44\n|   |   |--- mean_syn_pct <= 27.23\n|   |   |   |--- class: 1\n|   |   |--- mean_syn_pct >  27.23\n|   |   |   |--- class: 0\n|   |--- mean_bpp >  86.44\n|   |   |--- max_synack <= 0.50\n|   |   |   |--- class: 0\n|   |   |--- max_synack >  0.50\n|   |   |   |--- class: 1\n",
+  "depth": 3
+ }
+}

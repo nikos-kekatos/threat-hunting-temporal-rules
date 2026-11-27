@@ -1,0 +1,7 @@
+ASSERTION LIST: 
+
+
+****************** TARGET [ANOM] ********************
+!UDP_DOM && ACTIVE && !SYN_DOM ##[ 0.000000 : 1.000000 ] !ACTIVE|=> ##[ 0.000000 : 3.000000 ] !ANOM
+SUPPORT		= [10.166744]
+CORRELATION	= [10.677090]

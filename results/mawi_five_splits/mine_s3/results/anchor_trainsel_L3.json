@@ -1,0 +1,332 @@
+{
+ "params": {
+  "mine_dir": "./code/../results_dc/mine_s3",
+  "lags": 3,
+  "anchors": 20,
+  "seed": 1,
+  "max_neg_bins": 50000,
+  "planted": ""
+ },
+ "counts": {
+  "fit": {
+   "hosts": 148,
+   "anomalous": 80
+  },
+  "selection": {
+   "hosts": 152,
+   "anomalous": 70
+  },
+  "test_all": {
+   "hosts": 13918,
+   "anomalous": 3483
+  },
+  "test_half": {
+   "hosts": 6970,
+   "anomalous": 1778
+  }
+ },
+ "n_anchor_seconds": 20,
+ "candidates": [
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag1 && !ACTIVE_lag3 && !SMALL_DOM_lag0 && UDP_DOM_lag0",
+   "count": 3,
+   "selection_f1": 0.2931
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag1 && !RST_lag2 && SMALL_DOM_lag0 && SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.0282
+  },
+  {
+   "anchor": "!PKTS_HI_lag0 && !PKTS_HI_lag1 && !SMALL_DOM_lag0 && UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.2632
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag2 && !ACTIVE_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag3 && SMALL_DOM_lag0 && !SYN_DOM_lag0 && !SYN_DOM_lag2 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.2051
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && !PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && !SMALL_DOM_lag0 && !SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.0282
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag2 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !RST_lag1 && SMALL_DOM_lag0 && SMALL_DOM_lag1 && !SMALL_DOM_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag2 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.1579
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag3 && !DPORT_MANY_lag1 && PKTS_HI_lag0 && !RST_lag0 && SMALL_DOM_lag0 && !SYN_DOM_lag1 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.3256
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag2 && !ACTIVE_lag3 && !BPP_LARGE_lag2 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag2 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.1579
+  },
+  {
+   "anchor": "!PKTS_HI_lag2 && !SMALL_DOM_lag0 && !SYNACK_lag2 && UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.2931
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3 && !BPP_LARGE_lag2 && PKTS_HI_lag0 && !RST_lag3 && SMALL_DOM_lag0 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.3736
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag3 && PKTS_HI_lag0 && SMALL_DOM_lag0 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.3448
+  },
+  {
+   "anchor": "!PKTS_HI_lag0 && !SMALL_DOM_lag0 && UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.2632
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag3 && !BPP_LARGE_lag0 && !DST_MANY_lag0 && PKTS_HI_lag0 && RST_lag0 && SMALL_DOM_lag1 && !SYNACK_lag1 && !SYN_DOM_lag0 && !SYN_DOM_lag2",
+   "count": 1,
+   "selection_f1": 0.0278
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !BPP_LARGE_lag0 && PKTS_HI_lag0 && !PKTS_HI_lag3 && SMALL_DOM_lag0 && !SYNACK_lag0 && !SYN_DOM_lag0 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.3913
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DST_MANY_lag1 && !DST_VMANY_lag3 && !ICMP_lag1 && !ICMP_lag3 && PKTS_HI_lag0 && SMALL_DOM_lag0 && SMALL_DOM_lag1 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.2051
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag3 && !PKTS_HI_lag0 && !SMALL_DOM_lag0 && UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.2655
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag3 && !ICMP_lag1 && PKTS_HI_lag0 && SMALL_DOM_lag0 && !SYN_DOM_lag2 && !UDP_DOM_lag0 && !UDP_DOM_lag1",
+   "count": 1,
+   "selection_f1": 0.3448
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag3 && !ICMP_lag0 && PKTS_HI_lag0 && SMALL_DOM_lag0 && !SYN_DOM_lag1 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.3596
+  }
+ ],
+ "methods": [
+  {
+   "method": "anchors_modal (fit half only)",
+   "query": "ACTIVE_lag0 && !ACTIVE_lag1 && !ACTIVE_lag3 && !SMALL_DOM_lag0 && UDP_DOM_lag0",
+   "size": 5,
+   "test_all": {
+    "tp": 713,
+    "fp": 3221,
+    "fn": 2770,
+    "tn": 7214,
+    "precision": 0.1812,
+    "precision_ci": [
+     0.1695,
+     0.1936
+    ],
+    "recall": 0.2047,
+    "recall_ci": [
+     0.1916,
+     0.2184
+    ],
+    "f1": 0.1923
+   },
+   "test_half": {
+    "tp": 368,
+    "fp": 1594,
+    "fn": 1410,
+    "tn": 3598,
+    "precision": 0.1876,
+    "precision_ci": [
+     0.1709,
+     0.2054
+    ],
+    "recall": 0.207,
+    "recall_ci": [
+     0.1888,
+     0.2264
+    ],
+    "f1": 0.1968
+   },
+   "selection": {
+    "tp": 17,
+    "fp": 29,
+    "fn": 53,
+    "tn": 53,
+    "precision": 0.3696,
+    "precision_ci": [
+     0.2452,
+     0.514
+    ],
+    "recall": 0.2429,
+    "recall_ci": [
+     0.1575,
+     0.355
+    ],
+    "f1": 0.2931
+   }
+  },
+  {
+   "method": "anchors_selsel (selection-half F1)",
+   "query": "ACTIVE_lag0 && !ACTIVE_lag2 && !BPP_LARGE_lag0 && PKTS_HI_lag0 && !PKTS_HI_lag3 && SMALL_DOM_lag0 && !SYNACK_lag0 && !SYN_DOM_lag0 && !UDP_DOM_lag0",
+   "size": 9,
+   "test_all": {
+    "tp": 1101,
+    "fp": 512,
+    "fn": 2382,
+    "tn": 9923,
+    "precision": 0.6826,
+    "precision_ci": [
+     0.6595,
+     0.7048
+    ],
+    "recall": 0.3161,
+    "recall_ci": [
+     0.3009,
+     0.3317
+    ],
+    "f1": 0.4321
+   },
+   "test_half": {
+    "tp": 585,
+    "fp": 246,
+    "fn": 1193,
+    "tn": 4946,
+    "precision": 0.704,
+    "precision_ci": [
+     0.6721,
+     0.734
+    ],
+    "recall": 0.329,
+    "recall_ci": [
+     0.3076,
+     0.3512
+    ],
+    "f1": 0.4484
+   },
+   "selection": {
+    "tp": 18,
+    "fp": 4,
+    "fn": 52,
+    "tn": 78,
+    "precision": 0.8182,
+    "precision_ci": [
+     0.6148,
+     0.9269
+    ],
+    "recall": 0.2571,
+    "recall_ci": [
+     0.1693,
+     0.3703
+    ],
+    "f1": 0.3913
+   }
+  },
+  {
+   "method": "gbm fit half (model)",
+   "query": "gradient boosting, 52 features",
+   "size": null,
+   "test_all": {
+    "tp": 2108,
+    "fp": 3774,
+    "fn": 1375,
+    "tn": 6661,
+    "precision": 0.3584,
+    "precision_ci": [
+     0.3462,
+     0.3707
+    ],
+    "recall": 0.6052,
+    "recall_ci": [
+     0.5889,
+     0.6213
+    ],
+    "f1": 0.4502
+   },
+   "test_half": {
+    "tp": 1107,
+    "fp": 1876,
+    "fn": 671,
+    "tn": 3316,
+    "precision": 0.3711,
+    "precision_ci": [
+     0.3539,
+     0.3886
+    ],
+    "recall": 0.6226,
+    "recall_ci": [
+     0.5998,
+     0.6449
+    ],
+    "f1": 0.465
+   },
+   "selection": {
+    "tp": 41,
+    "fp": 33,
+    "fn": 29,
+    "tn": 49,
+    "precision": 0.5541,
+    "precision_ci": [
+     0.4409,
+     0.6618
+    ],
+    "recall": 0.5857,
+    "recall_ci": [
+     0.4688,
+     0.6937
+    ],
+    "f1": 0.5694
+   }
+  },
+  {
+   "method": "psiminer_selsel (mined on all training hosts)",
+   "query": "ACTIVE ##[ 0.000000 : 2.000000 ] UDP_DOM && DPORT_VMANY",
+   "size": 3,
+   "test_all": {
+    "tp": 0,
+    "fp": 5,
+    "fn": 3483,
+    "tn": 10430,
+    "precision": 0.0,
+    "precision_ci": [
+     0.0,
+     0.4345
+    ],
+    "recall": 0.0,
+    "recall_ci": [
+     0.0,
+     0.0011
+    ],
+    "f1": 0.0
+   },
+   "test_half": {
+    "tp": 0,
+    "fp": 1,
+    "fn": 1778,
+    "tn": 5191,
+    "precision": 0.0,
+    "precision_ci": [
+     0.0,
+     0.7935
+    ],
+    "recall": 0.0,
+    "recall_ci": [
+     0.0,
+     0.0022
+    ],
+    "f1": 0.0
+   },
+   "selection": null,
+   "planted_recovered": null
+  }
+ ]
+}

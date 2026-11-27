@@ -1,0 +1,138 @@
+run,bias,workaround_drop_constant,dropped,train_per_class,exit_recorded,log_completed,status,anom_rules,miner
+results/mine_s0,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/mine_s1,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/mine_s2,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/mine_s3,,False,,"{""anomalous"": 150, ""benign"": 150}",,True,completed,1,../PSIMiner/build/psiMiner
+results/mine_s4,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d4_n4_l0_m150_b1,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d4_n4_l0_m150_b1activeonlydrop_ACTIVE,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),1,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d4_n4_l0_m150_b1drop_ACTIVE,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d6_n4,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d6_n4_l0_m150_b1,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d6_n4_l0_m150_b1activeonlydrop_ACTIVE,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),4,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d6_n4_l0_m30,,False,,"{""anomalous"": 30, ""benign"": 30}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d6_n4_l0_m30_b1,1,False,,"{""anomalous"": 30, ""benign"": 30}",,False,crashed (no completion line),1,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d6_n4_l1_m150,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d6_n4_l3_m150,,False,,"{""anomalous"": 150, ""benign"": 150}",,True,completed,0,../PSIMiner/build/psiMiner
+results/sweep/ANOM_d8_n4,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d4_n4,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d4_n4_l0_m150_b1,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d4_n4_l0_m150_b1activeonlydrop_ACTIVE,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d4_n4_l0_m150_b1drop_ACTIVE,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d6_n4,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d6_n4_l0_m150,,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d6_n4_l0_m150_b1,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results/sweep/HANOM_d6_n4_l0_m150_b1activeonlydrop_ACTIVE,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results_b1/mine_s0,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results_b1/mine_s1,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results_b1/mine_s2,1,False,,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results_b1/mine_s3,1,False,,"{""anomalous"": 150, ""benign"": 150}",,True,completed,1,../PSIMiner/build/psiMiner
+results_b1/mine_s4,1,False,,"{""anomalous"": 150, ""benign"": 150}",,True,completed,0,../PSIMiner/build/psiMiner
+results_dc/mine_s0,0,True,DST_VMANY,"{""anomalous"": 150, ""benign"": 150}",-11,False,crashed (exit -11),,../PSIMiner/build/psiMiner
+results_dc/mine_s1,0,True,DST_VMANY,"{""anomalous"": 150, ""benign"": 150}",-11,False,crashed (exit -11),,../PSIMiner/build/psiMiner
+results_dc/mine_s2,0,True,DPORT_VMANY,"{""anomalous"": 150, ""benign"": 150}",-11,False,crashed (exit -11),,../PSIMiner/build/psiMiner
+results_dc/mine_s3,0,True,,"{""anomalous"": 150, ""benign"": 150}",,True,completed,1,../PSIMiner/build/psiMiner
+results_dc/mine_s4,0,True,DPORT_VMANY,"{""anomalous"": 150, ""benign"": 150}",-11,False,crashed (exit -11),,../PSIMiner/build/psiMiner
+results_dc_b1/mine_s0,1,True,DST_VMANY,"{""anomalous"": 150, ""benign"": 150}",,False,crashed (no completion line),0,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-2_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-2_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-2_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-4_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-4_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-4_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-6_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-6_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-6_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-8_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-8_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_review_1ep/gap1-8_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b0,0,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b0_dc,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,1,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b0_noact,0,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b1,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,1,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b1_dc,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b1_icmp,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b1_min,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b1_noact,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b1_small,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_synth/mine_clean_b1_varying,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_synth/mine_noise_b0,0,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_synth/mine_noise_b0_dc,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_synth/mine_noise_b1,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,1,../PSIMiner/build/psiMiner
+results_synth/mine_noise_b1_dc,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,4,../PSIMiner/build/psiMiner
+results_synth/mine_noise_b1_min,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,4,../PSIMiner/build/psiMiner
+results_synth/vocab/k10,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_synth/vocab/k3_active,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/vocab/k3_bpp,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/vocab/k3_dportv,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_synth/vocab/k3_pktshi,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/vocab/k3_pktshi_rep,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/vocab/k4_constF,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/vocab/k6_constF,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_synth/vocab/k8_constF,1,False,,"{""anomalous"": 150, ""benign"": 139}",,True,completed,6,../PSIMiner/build/psiMiner
+results_xai/gap1-2_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,2,../PSIMiner/build/psiMiner
+results_xai/gap1-2_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,6,../PSIMiner/build/psiMiner
+results_xai/gap1-2_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,2,../PSIMiner/build/psiMiner
+results_xai/gap1-2_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,6,../PSIMiner/build/psiMiner
+results_xai/gap1-2_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,2,../PSIMiner/build/psiMiner
+results_xai/gap1-2_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,6,../PSIMiner/build/psiMiner
+results_xai/gap1-4_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-4_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-4_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-4_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-4_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-4_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-6_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-6_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-6_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-6_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-6_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-6_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-8_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-8_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-8_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-8_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/gap1-8_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/gap1-8_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai/noise0.01_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.01_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0.01_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.01_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0.01_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.01_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,4,../PSIMiner/build/psiMiner
+results_xai/noise0.02_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.02_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0.02_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.02_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_xai/noise0.02_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.02_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,4,../PSIMiner/build/psiMiner
+results_xai/noise0.05_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.05_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,4,../PSIMiner/build/psiMiner
+results_xai/noise0.05_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.05_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_xai/noise0.05_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.05_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0.1_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.1_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,3,../PSIMiner/build/psiMiner
+results_xai/noise0.1_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.1_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0.1_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,0,../PSIMiner/build/psiMiner
+results_xai/noise0.1_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0_s1/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,1,../PSIMiner/build/psiMiner
+results_xai/noise0_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0_s2/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,1,../PSIMiner/build/psiMiner
+results_xai/noise0_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai/noise0_s3/mine,0,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,1,../PSIMiner/build/psiMiner
+results_xai/noise0_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,5,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-2_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-2_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-2_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-4_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-4_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-4_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-6_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-6_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-6_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-8_s1/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-8_s2/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner
+results_xai_v2/gap1-8_s3/mine_b1,1,True,ACTIVE PKTS_HI DST_MANY DST_VMANY DPORT_VMANY SYNACK RST UDP_DOM ICMP BPP_LARGE,"{""anomalous"": 150, ""benign"": 139}",,True,completed,8,../PSIMiner/build/psiMiner

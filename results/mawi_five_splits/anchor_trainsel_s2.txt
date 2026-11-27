@@ -1,0 +1,4 @@
+counts {"fit": {"hosts": 156, "anomalous": 79}, "selection": {"hosts": 144, "anomalous": 71}, "test_all": {"hosts": 13974, "anomalous": 3480}, "test_half": {"hosts": 6917, "anomalous": 1741}}; 15 candidates
+anchors_modal (fit half only)                  selF1 0.779  allF1 0.512 halfF1 0.521 planted None  ACTIVE_lag0 && !ACTIVE_lag1 && !ACTIVE_lag2 && !ACTIVE_lag3 && SMALL_D
+anchors_selsel (selection-half F1)             selF1 0.779  allF1 0.512 halfF1 0.521 planted None  ACTIVE_lag0 && !ACTIVE_lag1 && !ACTIVE_lag2 && !ACTIVE_lag3 && SMALL_D
+gbm fit half (model)                           selF1 0.720  allF1 0.487 halfF1 0.490 planted None  gradient boosting, 52 features

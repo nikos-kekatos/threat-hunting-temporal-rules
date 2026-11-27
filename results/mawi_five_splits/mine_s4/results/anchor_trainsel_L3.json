@@ -1,0 +1,291 @@
+{
+ "params": {
+  "mine_dir": "./code/../results_dc/mine_s4",
+  "lags": 3,
+  "anchors": 20,
+  "seed": 1,
+  "max_neg_bins": 50000,
+  "planted": ""
+ },
+ "counts": {
+  "fit": {
+   "hosts": 148,
+   "anomalous": 80
+  },
+  "selection": {
+   "hosts": 152,
+   "anomalous": 70
+  },
+  "test_all": {
+   "hosts": 13712,
+   "anomalous": 3427
+  },
+  "test_half": {
+   "hosts": 6822,
+   "anomalous": 1704
+  }
+ },
+ "n_anchor_seconds": 20,
+ "candidates": [
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "count": 3,
+   "selection_f1": 0.3133
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag3 && !SMALL_DOM_lag0 && UDP_DOM_lag1 && UDP_DOM_lag2",
+   "count": 1,
+   "selection_f1": 0.1818
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0 && !UDP_DOM_lag2",
+   "count": 1,
+   "selection_f1": 0.0556
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag2 && !ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag1 && SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.0
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag2 && !ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0 && !UDP_DOM_lag1 && !UDP_DOM_lag2 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.0282
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && !PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && PKTS_HI_lag3 && RST_lag0 && !RST_lag1 && !RST_lag2 && RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0 && !UDP_DOM_lag2 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.0
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag2 && !ICMP_lag1 && RST_lag0 && !SMALL_DOM_lag0 && SYN_DOM_lag1 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.0541
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag2 && !ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag1 && SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0 && !UDP_DOM_lag1 && !UDP_DOM_lag2 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.0
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag2 && ACTIVE_lag3 && BPP_LARGE_lag0 && BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && !PKTS_HI_lag0 && PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && !SMALL_DOM_lag0 && !SMALL_DOM_lag1 && !SMALL_DOM_lag2 && SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.0
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && !PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && SYNACK_lag1 && !SYNACK_lag2 && SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0 && !UDP_DOM_lag1 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.0
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !PKTS_HI_lag1 && !SMALL_DOM_lag0 && UDP_DOM_lag1 && UDP_DOM_lag2 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.1667
+  },
+  {
+   "anchor": "ACTIVE_lag0 && PKTS_HI_lag0 && SMALL_DOM_lag0 && !UDP_DOM_lag0 && !UDP_DOM_lag2",
+   "count": 1,
+   "selection_f1": 0.4694
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.0822
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag3 && RST_lag0 && RST_lag1 && !SMALL_DOM_lag1",
+   "count": 1,
+   "selection_f1": 0.05
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag2 && !PKTS_HI_lag0 && !SMALL_DOM_lag0 && UDP_DOM_lag0 && UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.1818
+  },
+  {
+   "anchor": "ACTIVE_lag0 && !ACTIVE_lag3 && !PKTS_HI_lag2 && !SMALL_DOM_lag0 && UDP_DOM_lag0 && UDP_DOM_lag1 && UDP_DOM_lag2 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.1649
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && ACTIVE_lag2 && ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "count": 1,
+   "selection_f1": 0.0282
+  },
+  {
+   "anchor": "ACTIVE_lag0 && ACTIVE_lag1 && !ACTIVE_lag3 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && SMALL_DOM_lag1 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0 && !UDP_DOM_lag1 && !UDP_DOM_lag3",
+   "count": 1,
+   "selection_f1": 0.2716
+  }
+ ],
+ "methods": [
+  {
+   "method": "anchors_modal (fit half only)",
+   "query": "ACTIVE_lag0 && ACTIVE_lag1 && !BPP_LARGE_lag0 && !BPP_LARGE_lag1 && !BPP_LARGE_lag2 && !BPP_LARGE_lag3 && !DPORT_MANY_lag0 && !DPORT_MANY_lag1 && !DPORT_MANY_lag2 && !DPORT_MANY_lag3 && !DPORT_VMANY_lag0 && !DPORT_VMANY_lag1 && !DPORT_VMANY_lag2 && !DPORT_VMANY_lag3 && !DST_MANY_lag0 && !DST_MANY_lag1 && !DST_MANY_lag2 && !DST_MANY_lag3 && !DST_VMANY_lag0 && !DST_VMANY_lag1 && !DST_VMANY_lag2 && !DST_VMANY_lag3 && !ICMP_lag0 && !ICMP_lag1 && !ICMP_lag2 && !ICMP_lag3 && PKTS_HI_lag0 && !PKTS_HI_lag1 && !PKTS_HI_lag2 && !PKTS_HI_lag3 && !RST_lag0 && !RST_lag1 && !RST_lag2 && !RST_lag3 && SMALL_DOM_lag0 && !SMALL_DOM_lag2 && !SMALL_DOM_lag3 && !SYNACK_lag0 && !SYNACK_lag1 && !SYNACK_lag2 && !SYNACK_lag3 && !SYN_DOM_lag0 && !SYN_DOM_lag1 && !SYN_DOM_lag2 && !SYN_DOM_lag3 && !UDP_DOM_lag0",
+   "size": 46,
+   "test_all": {
+    "tp": 644,
+    "fp": 179,
+    "fn": 2783,
+    "tn": 10106,
+    "precision": 0.7825,
+    "precision_ci": [
+     0.753,
+     0.8093
+    ],
+    "recall": 0.1879,
+    "recall_ci": [
+     0.1752,
+     0.2013
+    ],
+    "f1": 0.3031
+   },
+   "test_half": {
+    "tp": 331,
+    "fp": 98,
+    "fn": 1373,
+    "tn": 5020,
+    "precision": 0.7716,
+    "precision_ci": [
+     0.7295,
+     0.8088
+    ],
+    "recall": 0.1942,
+    "recall_ci": [
+     0.1762,
+     0.2137
+    ],
+    "f1": 0.3104
+   },
+   "selection": {
+    "tp": 13,
+    "fp": 0,
+    "fn": 57,
+    "tn": 82,
+    "precision": 1.0,
+    "precision_ci": [
+     0.7719,
+     1.0
+    ],
+    "recall": 0.1857,
+    "recall_ci": [
+     0.1119,
+     0.2923
+    ],
+    "f1": 0.3133
+   }
+  },
+  {
+   "method": "anchors_selsel (selection-half F1)",
+   "query": "ACTIVE_lag0 && PKTS_HI_lag0 && SMALL_DOM_lag0 && !UDP_DOM_lag0 && !UDP_DOM_lag2",
+   "size": 5,
+   "test_all": {
+    "tp": 1336,
+    "fp": 907,
+    "fn": 2091,
+    "tn": 9378,
+    "precision": 0.5956,
+    "precision_ci": [
+     0.5752,
+     0.6158
+    ],
+    "recall": 0.3898,
+    "recall_ci": [
+     0.3736,
+     0.4063
+    ],
+    "f1": 0.4713
+   },
+   "test_half": {
+    "tp": 680,
+    "fp": 461,
+    "fn": 1024,
+    "tn": 4657,
+    "precision": 0.596,
+    "precision_ci": [
+     0.5672,
+     0.6241
+    ],
+    "recall": 0.3991,
+    "recall_ci": [
+     0.3761,
+     0.4225
+    ],
+    "f1": 0.478
+   },
+   "selection": {
+    "tp": 23,
+    "fp": 5,
+    "fn": 47,
+    "tn": 77,
+    "precision": 0.8214,
+    "precision_ci": [
+     0.6441,
+     0.9212
+    ],
+    "recall": 0.3286,
+    "recall_ci": [
+     0.23,
+     0.445
+    ],
+    "f1": 0.4694
+   }
+  },
+  {
+   "method": "gbm fit half (model)",
+   "query": "gradient boosting, 52 features",
+   "size": null,
+   "test_all": {
+    "tp": 2180,
+    "fp": 3873,
+    "fn": 1247,
+    "tn": 6412,
+    "precision": 0.3602,
+    "precision_ci": [
+     0.3482,
+     0.3723
+    ],
+    "recall": 0.6361,
+    "recall_ci": [
+     0.6199,
+     0.6521
+    ],
+    "f1": 0.4599
+   },
+   "test_half": {
+    "tp": 1093,
+    "fp": 1910,
+    "fn": 611,
+    "tn": 3208,
+    "precision": 0.364,
+    "precision_ci": [
+     0.3469,
+     0.3813
+    ],
+    "recall": 0.6414,
+    "recall_ci": [
+     0.6184,
+     0.6639
+    ],
+    "f1": 0.4644
+   },
+   "selection": {
+    "tp": 40,
+    "fp": 38,
+    "fn": 30,
+    "tn": 44,
+    "precision": 0.5128,
+    "precision_ci": [
+     0.4039,
+     0.6205
+    ],
+    "recall": 0.5714,
+    "recall_ci": [
+     0.4548,
+     0.6806
+    ],
+    "f1": 0.5405
+   }
+  }
+ ]
+}

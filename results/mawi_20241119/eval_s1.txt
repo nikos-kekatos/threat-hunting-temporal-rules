@@ -1,0 +1,12 @@
+test hosts 13877 (3503 anomalous), train hosts 300
+== ordered: 0 ANOM rules; playbook {'tp': 0, 'fp': 0, 'fn': 3503, 'tn': 10374, 'precision': 0.0, 'precision_ci': [0.0, 0.0], 'recall': 0.0, 'recall_ci': [0.0, 0.0011], 'f1': 0.0}
+== permuted: 1 ANOM rules; playbook {'tp': 0, 'fp': 9, 'fn': 3503, 'tn': 10365, 'precision': 0.0, 'precision_ci': [0.0, 0.2992], 'recall': 0.0, 'recall_ci': [0.0, 0.0011], 'f1': 0.0}
+  ACTIVE ##[ 0.000000 : 1.000000 ] UDP_DOM && DPORT_VMANY ##[0:3]        P=0.000 R=0.000 conf=0.000 perm=0.000 coll=0.000 gain=+0.000
+  expert H1 network scan    P=0.019 R=0.002 conf=0.001
+  expert H2 port scan       P=0.052 R=0.001 conf=0.002
+  expert H3 SYN flood       P=0.038 R=0.002 conf=0.003
+  expert H4 ICMP sweep      P=0.013 R=0.001 conf=0.278
+  expert H5 UDP scan        P=0.049 R=0.003 conf=0.045
+  expert H6 rejected conn   P=0.327 R=0.117 conf=0.271
+expert playbook {'tp': 418, 'fp': 1509, 'fn': 3085, 'tn': 8865, 'precision': 0.2169, 'precision_ci': [0.1991, 0.2359], 'recall': 0.1193, 'recall_ci': [0.109, 0.1305], 'f1': 0.154}
+tree: P=0.487 R=0.743 leaves=7

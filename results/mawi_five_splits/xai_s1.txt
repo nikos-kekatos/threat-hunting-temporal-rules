@@ -1,0 +1,10 @@
+test hosts 13877, base rate 0.252
+method             view          P      R     F1   F1perm  planted  size
+psiminer           temporal skipped: PSIMiner crashed (exit -11)
+tree_d3            host      0.487  0.743  0.589    0.589  None     7 leaves
+ripper             host      0.466  0.745  0.573    0.573  None     10 rules, 14 conds
+gbm+shap           host      0.612  0.824  0.702    0.702  None     top-3 of 21 features
+tree_d3            bin       0.276  0.997  0.432    0.432  None     5 leaves
+ripper             bin       0.276  0.997  0.432    0.432  None     5 rules, 14 conds
+gbm+shap           bin       0.324  0.975  0.486    0.478  None     top-3 of 52 features
+anchors            bin       0.262  0.243  0.252    0.237  None     4 literals (modal of 20 anchors, 16 distinct)

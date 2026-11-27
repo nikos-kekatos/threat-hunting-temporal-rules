@@ -1,0 +1,7 @@
+ASSERTION LIST: 
+
+
+****************** TARGET [ANOM] ********************
+ACTIVE ##[ 0.000000 : 1.000000 ] UDP_DOM && DPORT_VMANY|=> ##[ 0.000000 : 3.000000 ] ANOM
+SUPPORT		= [0.407689]
+CORRELATION	= [8.484504]

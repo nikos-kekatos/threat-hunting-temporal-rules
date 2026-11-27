@@ -1,0 +1,7 @@
+ASSERTION LIST: 
+
+
+****************** TARGET [ANOM] ********************
+!SYN_DOM && DPORT_VMANY|=> ##[ 0.000000 : 4.000000 ] ANOM
+SUPPORT		= [2.256944]
+CORRELATION	= [8.759763]
